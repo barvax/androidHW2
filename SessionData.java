@@ -14,10 +14,6 @@ public class SessionData {
         return  instance;
     }
 
-
-
-
-
     public User getUser() {
         return user;
     }
@@ -38,11 +34,4 @@ public class SessionData {
 
 
 
-    @Override
-    public String toString() {
-        return "SessionData{" +
-                "user=" + user.getName() +
-                ", pet=" + pet.getPetName() +
-                '}';
-    }
 }

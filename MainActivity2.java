@@ -66,15 +66,7 @@ public class MainActivity2 extends AppCompatActivity {
             SessionData sessionData =  SessionData.getInstance();
             if(user!=null){
                 sessionData.setUser(user);
-//              String x =  sessionData.getUser().getName();
-//                String y =  sessionData.getUser().getAge();
-//                String z =  sessionData.getUser().getGender();
-//                boolean w = sessionData.getUser().isPet();
-//
-//                Toast.makeText(this, "user name:" + x, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(this, "user age:" + y, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(this, "user gender:" + z, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(this, "user pet?:" + w, Toast.LENGTH_SHORT).show();
+
                 if(sessionData.getUser().isPet()){
                     Intent intent = new Intent(this , MainActivity3.class);
                     startActivity(intent);
@@ -82,14 +74,9 @@ public class MainActivity2 extends AppCompatActivity {
                     Intent intent = new Intent(this , MainActivity4.class);
                     startActivity(intent);
                 }
-
             }
-
-
-
-
-
         });
+
         btnBack.setOnClickListener(view -> {
             if (SessionData.getInstance().getUser()!=null){
                 Intent intent = new Intent(this , WelcomeUserActivity.class);
